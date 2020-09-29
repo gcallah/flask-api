@@ -1,4 +1,4 @@
-DOCFILES = $(shell ls *.py | sed -e 's/.py/.html/')
+DOCFILES = $(shell ls *.py | sed 's/.py/.html/')
 
 docs: $(DOCFILES)
 
