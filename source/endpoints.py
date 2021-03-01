@@ -33,10 +33,10 @@ class Endpoints(Resource):
     """
     def get(self):
         """
-        The `get()` method will return a list of endpoints along with
-        documentation on them.
+        The `get()` method will return a list of available endpoints.
         """
-        return {'end': 'points'}
+        endpoints = sorted(rule.rule for rule in api.app.url_map.iter_rules())
+        return {"Available endpoints": endpoints}
 
 
 @api.route('/pets')
