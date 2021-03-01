@@ -13,7 +13,7 @@ github: FORCE
 tests: lint unit
 
 unit: FORCE
-	echo "We have to write some tests!"
+	python3 -m unittest source.db
 
 lint: FORCE
 	$(LINTER) $(SRC_DIR)/*.py
