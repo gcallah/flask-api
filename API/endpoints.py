@@ -5,7 +5,7 @@ The endpoint called `endpoints` will return all available endpoints.
 
 from flask import Flask
 from flask_restx import Resource, Api
-from db import fetch_pets
+import db.db as db
 
 app = Flask(__name__)
 api = Api(app)
@@ -48,4 +48,4 @@ class Pets(Resource):
         """
         This method returns all pets.
         """
-        return fetch_pets()
+        return db.fetch_pets()

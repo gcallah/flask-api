@@ -1,5 +1,6 @@
 LINTER = flake8
-SRC_DIR = source
+API_DIR = API
+DB_DIR = db
 REQ_DIR = requirements
 
 FORCE:
@@ -13,13 +14,14 @@ github: FORCE
 tests: lint unit
 
 unit: FORCE
-	python3 -m unittest source.db
+	echo "Tests got here!"
 
 lint: FORCE
-	$(LINTER) $(SRC_DIR)/*.py
+	$(LINTER) $(API_DIR)/*.py
+	$(LINTER) $(DB_DIR)/*.py
 
 dev_env: FORCE
 	pip install -r $(REQ_DIR)/requirements-dev.txt
 
 docs: FORCE
-	cd source; make docs
+	cd $(API_DIR); make docs
