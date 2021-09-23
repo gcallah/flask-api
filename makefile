@@ -14,7 +14,7 @@ github: FORCE
 tests: lint unit
 
 unit: FORCE
-	echo "Tests got here!"
+	echo "Tests go here!"
 
 lint: FORCE
 	$(LINTER) $(API_DIR)/*.py
