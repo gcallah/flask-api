@@ -1,7 +1,7 @@
 LINTER = flake8
 API_DIR = API
 DB_DIR = db
-REQ_DIR = requirements
+REQ_DIR = .
 
 FORCE:
 
@@ -14,7 +14,7 @@ github: FORCE
 tests: lint unit
 
 unit: FORCE
-	echo "Tests go here!"
+	cd $(API_DIR); nosetests --with-coverage --cover-package=$(API_DIR)
 
 lint: FORCE
 	$(LINTER) $(API_DIR)/*.py
