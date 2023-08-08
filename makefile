@@ -1,5 +1,5 @@
 LINTER = flake8
-API_DIR = API
+API_DIR = server
 DB_DIR = db
 REQ_DIR = .
 

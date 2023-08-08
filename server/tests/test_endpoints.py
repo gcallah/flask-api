@@ -1,7 +1,7 @@
 
 from unittest import TestCase, skip 
 
-import API.endpoints as ep
+import server.endpoints as ep
 
 
 class EndpointTestCase(TestCase):
